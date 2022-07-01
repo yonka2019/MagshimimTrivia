@@ -5,7 +5,6 @@ using System.Windows.Forms;
 public class CountDownTimer : IDisposable
 {
     public Stopwatch _stpWatch = new Stopwatch();
-
     public Action TimeChanged;
     public Action CountDownFinished;
 
