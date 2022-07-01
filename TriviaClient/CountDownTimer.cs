@@ -1,5 +1,3 @@
-﻿#region https://stackoverflow.com/questions/6191576/seconds-countdown-timer
-
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
@@ -113,4 +111,3 @@ public class CountDownTimer : IDisposable
         timer.Dispose();
     }
 }
-#endregion
