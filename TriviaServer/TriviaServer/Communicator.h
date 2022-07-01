@@ -17,7 +17,7 @@ using std::map;
 using std::thread;
 using std::exception;
 
-#define PORT 42069
+#define PORT 9300
 
 #define CODE_BUFFER_SIZE 2 // (1 byte length, because the length is convert into hex, 1 * 2 = 2 ==> 2 bytes)
 #define LENGTH_BUFFER_SIZE 8 // (4 bytes length, because the length is converted into hex, 4 * 2 = 8 ==> 8 bytes)
