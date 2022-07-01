@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2452921-07CC-4279-8A22-EA73B2A3DF67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TriviaClient</RootNamespace>
+    <AssemblyName>TriviaClient</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_puzzle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address.cs" />
+    <Compile Include="AutoDataUpdater.cs" />
+    <Compile Include="CountDownTimer.cs" />
+    <Compile Include="FontManager.cs" />
+    <Compile Include="Fonts.cs" />
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameResults.Designer.cs">
+      <DependentUpon>GameResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStartedException.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TriviaQuestion.cs" />
+    <Compile Include="RoomClosedException.cs" />
+    <Compile Include="TriviaGet.cs" />
+    <Compile Include="TriviaRequest.cs" />
+    <Compile Include="TriviaMessage.cs" />
+    <Compile Include="CreateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateRoom.Designer.cs">
+      <DependentUpon>CreateRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CueTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HighScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScores.Designer.cs">
+      <DependentUpon>HighScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JoinRoom.Designer.cs">
+      <DependentUpon>JoinRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalStatistics.Designer.cs">
+      <DependentUpon>PersonalStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Socket.cs" />
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriviaProtocol.cs" />
+    <Compile Include="TriviaResponse.cs" />
+    <Compile Include="WaitingForGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitingForGame.Designer.cs">
+      <DependentUpon>WaitingForGame.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateRoom.resx">
+      <DependentUpon>CreateRoom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameResults.resx">
+      <DependentUpon>GameResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScores.resx">
+      <DependentUpon>HighScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinRoom.resx">
+      <DependentUpon>JoinRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalStatistics.resx">
+      <DependentUpon>PersonalStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitingForGame.resx">
+      <DependentUpon>WaitingForGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARCADECLASSIC.TTF" />
+    <None Include="Resources\exit_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiraMono-Regular.ttf" />
+    <None Include="Resources\join_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenSans-Regular.ttf" />
+    <None Include="Resources\rating_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_puzzle.ico" />
+    <None Include="Resources\1st_20asdpx.png" />
+    <Content Include="Resources\BrickWall.png" />
+    <None Include="Resources\gameIcon.ico" />
+    <None Include="Resources\more_than_50px.png" />
+    <None Include="Resources\circled_0dh_20px.png" />
+    <Content Include="Resources\Close_35px.png" />
+    <Content Include="Resources\Done2_35px.png" />
+    <None Include="Resources\help_45px.png" />
+    <None Include="Resources\gray help_45px.png" />
+    <Content Include="Resources\leaderboard_highscore.png" />
+    <Content Include="Resources\person_40px.png" />
+    <None Include="Resources\plus_math_35px.png" />
+    <Content Include="Resources\QuestionBG.jpg" />
+    <None Include="Resources\scorecard_40px.png" />
+    <None Include="Resources\test_passed_40px.png" />
+    <None Include="Resources\test_passed_45px.png" />
+    <Content Include="Resources\TimeLeftClock.png" />
+    <Content Include="Resources\timer_35px.png" />
+    <Content Include="Resources\users_35px.png" />
+    <None Include="Resources\Ubuntu-R.ttf" />
+    <None Include="Resources\WaitingForGameBG.jpg" />
+    <None Include="Resources\icons8_join.ico" />
+    <None Include="Resources\icons8_rating.ico" />
+    <None Include="Resources\icons8_room.ico" />
+    <None Include="Resources\leaderboard_35px.png" />
+    <None Include="Resources\person_35px.png" />
+    <None Include="Resources\icons8_leaderboard.ico" />
+    <None Include="Resources\icons8_person.ico" />
+    <None Include="Resources\icons8_wait.ico" />
+    <Content Include="Resources\clock_35px.png" />
+    <Content Include="Resources\icons8_puzzle.ico" />
+    <Content Include="Resources\QuestionmarkBG.jpg" />
+    <None Include="Resources\settings_40px.png" />
+    <None Include="Resources\QuestionMarkBG_CreateRoom.jpg" />
+    <None Include="Resources\QuestionMarkBG2_JoinRoom.png" />
+    <Content Include="Resources\questions_35px.png" />
+    <Content Include="Resources\TriviaNightBG.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
