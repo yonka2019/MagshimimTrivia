@@ -2,7 +2,7 @@
 Magshimim Trivia Project (Server & Client sides)
 
 # Client Preview
-Video: https://streamable.com/zjbmb3
+Video: https://www.veed.io/view/4d2f7250-33e4-4956-bd41-763072742c85
 
 
 ![preview1](https://i.ibb.co/wyP2zhg/trivia-image.png)
